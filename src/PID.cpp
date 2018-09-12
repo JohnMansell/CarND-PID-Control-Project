@@ -61,7 +61,7 @@ using namespace std;
 
 		// Throttle
 			throttle = 0.2;
-			throttle_max = 0.7;
+			throttle_max = 1.0;
 	}
 
 //----------------------
@@ -85,7 +85,6 @@ using namespace std;
 	double PID::Total_Error() {
 
 		double total_error = (Kp * p_error) + (Ki * i_error) + (Kd * d_error) ;
-		cout <<  Kp * p_error <<  " + " << Ki * i_error << " + " << Kd * d_error << setw(5) << endl;
 		return total_error;
 	}
 
@@ -122,7 +121,7 @@ using namespace std;
 			throttle = std::max(throttle, 0.01);
 
 		// Break if Diverging
-			if(abs(d_error) > 0.05 )
+			if(abs(d_error) > 0.029 )
 			{
 				throttle = -1.0;
 			}

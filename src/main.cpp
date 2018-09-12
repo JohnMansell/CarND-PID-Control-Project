@@ -10,18 +10,19 @@ using namespace std;
 //      Parameters
 //------------------------
 	// Steering Angle
-		double init_Kp = -1.0;
+		double init_Kp = -1.7;
 		double init_Ki = -0.0;
-		double init_Kd = -30.0;
+		double init_Kd = -70.0;
 
 		double steer_value = 0.0;
 
 	// Throttle
-		double init_Tp = 0.1;
+		double init_Tp = 3.0;
 		double init_Ti = 0.0;
 		double init_Td = 0.0;
 
 		double throttle = 0.0;
+		double top_speed = 0.0;
 
 
 
@@ -90,7 +91,7 @@ using namespace std;
 	        if (event == "telemetry") {
 	          // j[1] is the data JSON object
 	          double cte = std::stod(j[1]["cte"].get<std::string>());
-	          //double speed = std::stod(j[1]["speed"].get<std::string>());
+	          double speed = std::stod(j[1]["speed"].get<std::string>());
 	          //double angle = std::stod(j[1]["steering_angle"].get<std::string>());
 
 	          // Update
@@ -101,6 +102,12 @@ using namespace std;
 
 	          // Speed
 	              throttle = pid.throttle;
+
+	              if (speed > top_speed)
+	              {
+	              	top_speed = speed;
+	              	cout << "New Top Speed : " << top_speed << endl;
+	              }
 
 
 	          // DEBUG
