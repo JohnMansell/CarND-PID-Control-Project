@@ -10,9 +10,9 @@ using namespace std;
 //      Parameters
 //------------------------
 	// Steering Angle
-		double init_Kp = -0.75;
-		double init_Ki = -0.001;
-		double init_Kd = -20.0;
+		double init_Kp = -1.0;
+		double init_Ki = -0.0;
+		double init_Kd = -30.0;
 
 		double steer_value = 0.0;
 

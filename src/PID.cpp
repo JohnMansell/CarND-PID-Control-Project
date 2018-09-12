@@ -61,7 +61,7 @@ using namespace std;
 
 		// Throttle
 			throttle = 0.2;
-			throttle_max = 0.3;
+			throttle_max = 0.7;
 	}
 
 //----------------------
@@ -122,10 +122,10 @@ using namespace std;
 			throttle = std::max(throttle, 0.01);
 
 		// Break if Diverging
-//			if(abs(d_error) > 0 )
-//			{
-//				throttle = -1.0;
-//			}
+			if(abs(d_error) > 0.05 )
+			{
+				throttle = -1.0;
+			}
 
 
 		//cout << "p i d = " << p_error << " - " << i_error << " - " << d_error << endl;
