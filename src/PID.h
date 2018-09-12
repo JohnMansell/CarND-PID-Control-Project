@@ -10,12 +10,26 @@ public:
   double i_error;
   double d_error;
 
+  double prev_cte;
+  double sum_cte;
+
   /*
   * Coefficients
-  */ 
+  */
   double Kp;
   double Ki;
   double Kd;
+
+  double Tp;
+  double Ti;
+  double Td;
+
+  // Steering Angle
+      double steering_angle;
+      double throttle;
+      double throttle_max;
+
+
 
   /*
   * Constructor
@@ -30,17 +44,24 @@ public:
   /*
   * Initialize PID.
   */
-  void Init(double Kp, double Ki, double Kd);
+  void Init(double Kp, double Ki, double Kd,
+            double Tp, double Ti, double Td);
 
   /*
   * Update the PID error variables given cross track error.
   */
-  void UpdateError(double cte);
+  void Update_Error(double cte);
 
   /*
   * Calculate the total PID error.
   */
-  double TotalError();
+  double Total_Error();
+
+  void Update(double cte);
+
+  void Set_Steering_Angle();
+
+  void Set_Throttle();
 };
 
 #endif /* PID_H */
