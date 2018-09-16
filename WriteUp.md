@@ -54,3 +54,7 @@ to the CTE as well. At first, I tried implementing a PID controller for the thro
 a 1/x^2 curve was a better model for throttle control. It was responsive to changes in CTE and
 allowed the car to accelerate out of a curve. The car was able to attain a top speed of around 75 mph
 on the second lap.
+
+### 5. Video
+> A video of my car driving around the track can be found [here](./self_driving_car_nanodegree_program%209_17_2018%201_19_44%20AM.mp4)
+> Or [here](https://youtu.be/w_TzpFNDRjw)
