@@ -10,9 +10,9 @@ car around a track built on the Unity engine.
 current position to the center of the track. This is called the Cross Track Error. Based on the
 cross track error, the controller outputs a value for throttle and steering angle. The controller
 considers the CTE in 3 different respects.
-> * P (proportional error) -- The distance from the car to the center of the track
-> * I (integral error) -- The sum of all previous errors over all time steps
-> * D (differential error) -- The change in error from one time-step to the next  
+> * P (proportional error) -- The distance from the car to the center of the track (= CTE)
+> * I (integral error) -- The sum of all previous errors over all time steps ( = sum [CTE])
+> * D (differential error) -- The change in error from one time-step to the next (= dCTE) 
 >
 > The final PID parameters used were PID = ( -1.7, 0.0, -70.0).  
 > Each parameter is factored into the total error, which is a weighted sum of the three parameters.
@@ -56,5 +56,4 @@ allowed the car to accelerate out of a curve. The car was able to attain a top s
 on the second lap.
 
 ### 5. Video
-> A video of my car driving around the track can be found [here](./self_driving_car_nanodegree_program%209_17_2018%201_19_44%20AM.mp4)
-> Or [here](https://youtu.be/w_TzpFNDRjw)
+> A video of my car driving around the track can be found [here](https://youtu.be/w_TzpFNDRjw)
