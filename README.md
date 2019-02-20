@@ -14,6 +14,6 @@
 [![PID Controller](http://img.youtube.com/vi/w_TzpFNDRjw/0.jpg)](https://youtu.be/w_TzpFNDRjw "PID Controller")
 
 ### Included Files
-> [WriteUp.md](WriteUp.md) -- Full Write up
-> [PID.cpp](src/PID.cpp) -- PID controller
+> [WriteUp.md](WriteUp.md) -- Full Write up  
+> [PID.cpp](src/PID.cpp) -- PID controller  
 > [main.cpp](src/main.cpp) -- connects the pid controller to the simulator and implements PID control.
