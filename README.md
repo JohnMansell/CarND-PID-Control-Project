@@ -1,5 +1,5 @@
 # PID Controller
-> [![PID Controller](WriteUp/PID.gif)](https://youtu.be/w_TzpFNDRjw "PID Controller")
+> [![PID Controller](WriteUp/PID.gif)](https://youtu.be/w_TzpFNDRjw "PID Controller")  
 > [Full Video](https://youtu.be/w_TzpFNDRjw "PID Controller") on YouTube
 # Objective
 > Impliment a PID controller in C++ to maneuver the vehicle around the track.
