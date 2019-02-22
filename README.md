@@ -1,4 +1,7 @@
 # PID Controller
+> [![PID Controller](WriteUp/PID.gif)](https://youtu.be/w_TzpFNDRjw "PID Controller")
+> [Full Video](https://youtu.be/w_TzpFNDRjw "PID Controller") on YouTube
+# Objective
 > Impliment a PID controller in C++ to maneuver the vehicle around the track.
 > The simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle.
 >
@@ -10,8 +13,6 @@
 > ### Languages
 > - C++
 >
-# Video
-[![PID Controller](http://img.youtube.com/vi/w_TzpFNDRjw/0.jpg)](https://youtu.be/w_TzpFNDRjw "PID Controller")
 
 ### Included Files
 > [WriteUp.md](WriteUp.md) -- Full Write up  
